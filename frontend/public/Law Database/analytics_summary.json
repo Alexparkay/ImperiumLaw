@@ -1,0 +1,110 @@
+{
+  "total_cases": 200,
+  "avg_duration_days": 347.5,
+  "min_duration_days": 168,
+  "max_duration_days": 926,
+  "avg_debt_ratio": 0,
+  "total_original_loan": 3402721.26,
+  "total_outstanding_debt": 2404725.81,
+  "avg_original_loan": 486103.04,
+  "avg_outstanding_debt": 480945.16,
+  "top_courts": [
+    {
+      "name": "New York State, Nassau County, Supreme Court",
+      "count": 27
+    },
+    {
+      "name": "New York State, Suffolk County, Supreme Court",
+      "count": 25
+    },
+    {
+      "name": "New York State, Erie County, Supreme Court",
+      "count": 20
+    },
+    {
+      "name": "New York State, Kings County, Supreme Court",
+      "count": 19
+    },
+    {
+      "name": "New York State, Queens County, Supreme Court",
+      "count": 13
+    }
+  ],
+  "top_law_firms": [
+    {
+      "name": "ROBERTSON, ANSCHUTZ, SCHNEID, CRANE & PARTNERS, PLLC",
+      "count": 32
+    },
+    {
+      "name": "LOGS LEGAL GROUP LLP",
+      "count": 13
+    },
+    {
+      "name": "GROSS POLOWY, LLC",
+      "count": 11
+    },
+    {
+      "name": "DAVIDSON FINK LLP",
+      "count": 9
+    },
+    {
+      "name": "Friedman Vartolo LLP",
+      "count": 8
+    },
+    {
+      "name": "FRENKEL, LAMBERT, WEISS, WEISMAN & GORDON",
+      "count": 7
+    },
+    {
+      "name": "KNUCKLES, KOMOSINSKI & ELLIOTT, LLP",
+      "count": 6
+    },
+    {
+      "name": "Peter T. Roach & Associates, P.C.",
+      "count": 5
+    },
+    {
+      "name": "Gross Polowy LLC",
+      "count": 5
+    },
+    {
+      "name": "GROSS POLOWY LLC",
+      "count": 5
+    }
+  ],
+  "top_judges": [
+    {
+      "name": "Sam Valleriani",
+      "count": 12
+    },
+    {
+      "name": "Cenceria Edwards",
+      "count": 10
+    },
+    {
+      "name": "Robert F Quinlan",
+      "count": 4
+    },
+    {
+      "name": "Craig J Doran",
+      "count": 3
+    },
+    {
+      "name": "Master",
+      "count": 3
+    }
+  ],
+  "case_types": {
+    "Real Property - Mortgage Foreclosure - Residential": 189,
+    "Real Property - Mortgage Foreclosure - Commercial": 11
+  },
+  "statuses": {
+    "Disposed": 200
+  },
+  "duration_distribution": {
+    "under_90_days": 0,
+    "90_180_days": 3,
+    "180_365_days": 24,
+    "over_365_days": 20
+  }
+}

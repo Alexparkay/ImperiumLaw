@@ -1,0 +1,165 @@
+/* Legal Theme Color Accents */
+
+/* Professional legal color palette */
+:root {
+  --legal-primary: rgba(59, 130, 246, 0.15); /* Professional blue */
+  --legal-secondary: rgba(99, 102, 241, 0.1); /* Subtle purple */
+  --legal-accent: rgba(16, 185, 129, 0.15); /* Success green for efficiency */
+  --legal-warning: rgba(251, 146, 60, 0.15); /* Warning orange for delays */
+}
+
+/* Legal accent for glass-morphism effects */
+.legal-accent {
+  background: linear-gradient(
+    135deg, 
+    var(--legal-primary) 0%,
+    var(--legal-secondary) 100%
+  );
+}
+
+/* Legal card hover effects */
+.legal-card:hover {
+  background: linear-gradient(
+    135deg,
+    rgba(59, 130, 246, 0.05) 0%,
+    rgba(99, 102, 241, 0.03) 100%
+  );
+  border-color: rgba(59, 130, 246, 0.3);
+}
+
+/* Status badges for case durations */
+.status-expedited {
+  background-color: var(--legal-accent);
+  color: rgb(16, 185, 129);
+}
+
+.status-standard {
+  background-color: var(--legal-primary);
+  color: rgb(59, 130, 246);
+}
+
+.status-extended {
+  background-color: var(--legal-warning);
+  color: rgb(251, 146, 60);
+}
+
+/* Efficiency metrics styling */
+.efficiency-high {
+  color: rgb(16, 185, 129);
+}
+
+.efficiency-medium {
+  color: rgb(59, 130, 246);
+}
+
+.efficiency-low {
+  color: rgb(251, 146, 60);
+}
+
+/* Legal data table enhancements */
+.legal-table-header {
+  background: linear-gradient(
+    90deg,
+    rgba(59, 130, 246, 0.08) 0%,
+    rgba(99, 102, 241, 0.05) 100%
+  );
+}
+
+/* Case priority indicators */
+.priority-urgent {
+  border-left: 4px solid rgb(251, 146, 60);
+}
+
+.priority-high {
+  border-left: 4px solid rgb(59, 130, 246);
+}
+
+.priority-normal {
+  border-left: 4px solid rgb(156, 163, 175);
+}
+
+/* Legal button styles */
+.btn-legal-primary {
+  background: linear-gradient(
+    135deg,
+    rgb(59, 130, 246) 0%,
+    rgb(99, 102, 241) 100%
+  );
+  color: white;
+  transition: all 0.3s ease;
+}
+
+.btn-legal-primary:hover {
+  background: linear-gradient(
+    135deg,
+    rgb(37, 99, 235) 0%,
+    rgb(79, 70, 229) 100%
+  );
+  box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
+}
+
+/* Duration metric cards */
+.duration-card {
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.1) 0%,
+    rgba(255, 255, 255, 0.05) 100%
+  );
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Court performance indicators */
+.court-performance-good {
+  background-color: rgba(16, 185, 129, 0.1);
+  border-color: rgba(16, 185, 129, 0.3);
+}
+
+.court-performance-average {
+  background-color: rgba(59, 130, 246, 0.1);
+  border-color: rgba(59, 130, 246, 0.3);
+}
+
+.court-performance-poor {
+  background-color: rgba(251, 146, 60, 0.1);
+  border-color: rgba(251, 146, 60, 0.3);
+}
+
+/* Legal tooltip styling */
+.legal-tooltip {
+  background-color: rgba(31, 41, 55, 0.95);
+  border: 1px solid rgba(59, 130, 246, 0.3);
+  backdrop-filter: blur(8px);
+}
+
+/* Animated legal accent for loading states */
+@keyframes legalPulse {
+  0%, 100% {
+    opacity: 0.6;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+.legal-loading {
+  animation: legalPulse 2s ease-in-out infinite;
+  background: linear-gradient(
+    90deg,
+    var(--legal-primary) 0%,
+    var(--legal-secondary) 50%,
+    var(--legal-primary) 100%
+  );
+  background-size: 200% 100%;
+  animation: legalPulse 2s ease-in-out infinite, 
+             shimmer 3s ease-in-out infinite;
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}

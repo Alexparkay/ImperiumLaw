@@ -1,0 +1,701 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
+    
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+    
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+    
+    --primary: 221.2 83.2% 53.3%;
+    --primary-foreground: 210 40% 98%;
+    
+    --secondary: 210 40% 96.1%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
+    
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+    
+    --accent: 210 40% 96.1%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+    
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+    
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 221.2 83.2% 53.3%;
+
+    --radius: 0.5rem;
+  }
+}
+
+@layer components {
+  .glass-panel {
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  }
+}
+
+@layer base {
+  body {
+    @apply bg-white text-gray-800;
+  }
+
+  * {
+    @apply border-border;
+  }
+}
+
+/* App Container */
+.app-container {
+  @apply min-h-screen;
+}
+
+/* Transitions */
+.transition-height {
+  transition: height 0.3s ease;
+}
+
+/* Add additional global styles as needed */
+
+:root {
+    font-family: "Inter", sans-serif;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden !important;
+    overflow-y: auto !important;
+    @apply bg-base-100 text-base-content;
+}
+
+:fullscreen::backdrop {
+    background: none !important;
+    overflow: visible;
+}
+
+:fullscreen::before & :fullscreen::after {
+    overflow: visible;
+    overflow: visible;
+}
+
+:fullscreen #rootContainer {
+    overflow: auto !important;
+}
+
+:fullscreen body {
+    overflow: auto !important;
+}
+
+:fullscreen {
+    height: auto !important;
+    overflow: auto !important;
+}
+
+/* Home */
+.home .box {
+    @apply rounded-lg xl:rounded-2xl overflow-visible border-2 border-gray-200 p-4 xl:p-4 2xl:p-6
+}
+
+.dataGrid span, .dataGrid svg, .dataGrid button {
+    @apply text-base-content
+}
+
+.dataGrid .MuiDataGrid-columnHeaders {
+    @apply text-base-content border-base-content
+}
+
+.dataGrid .MuiDataGrid-virtualScroller {
+    @apply text-base-content border-base-content
+}
+
+.dataGrid .MuiDataGrid-row .MuiDataGrid-cell .MuiSvgIcon-root {
+    @apply text-base-content
+}
+
+.dataGrid .MuiDataGrid-footerContainer {
+    @apply text-base-content border-base-content
+}
+
+.dataGrid .MuiDataGrid-footerContainer p {
+    @apply text-base-content border-base-content
+}
+
+.dataGrid .MuiDataGrid-toolbarContainer {
+    @apply flex-row-reverse
+}
+
+.dataGrid .MuiDataGrid-toolbarContainer input {
+    @apply border-base-content text-base-content
+}
+
+.dataGrid .MuiDataGrid-toolbarContainer ::placeholder {
+    @apply text-base-content
+}
+
+.modal-action> :not([hidden])~ :not([hidden]) {
+    margin-right: 0 !important;
+    margin-left: 0 !important;
+}
+
+.skeleton {
+    @apply bg-gray-200
+}
+
+.fc .fc-header-toolbar .fc-toolbar-chunk {
+    @apply text-[10px] xl:text-base
+}
+
+.fc .fc-header-toolbar .fc-toolbar-chunk .fc-button {
+    @apply btn btn-ghost
+}
+
+.fc .fc-header-toolbar .fc-toolbar-chunk .fc-button-group {
+    @apply gap-2
+}
+
+.fc .fc-header-toolbar .fc-toolbar-chunk .fc-button.fc-button-primary {
+    @apply border-none text-base-content
+}
+
+.fc .fc-header-toolbar .fc-toolbar-chunk .fc-button.fc-button-primary:disabled {
+    @apply btn-disabled opacity-50
+}
+
+#singleUser #activities ul li {
+    @apply list-none relative w-[1px] pt-[50px] bg-primary
+}
+
+#singleUser #activities ul li::after {
+    content: "";
+    @apply absolute left-[50%] bottom-0 w-[10px] h-[10px] rounded-full bg-primary -translate-x-[50%]
+}
+
+#singleProduct #activities ul li {
+    @apply list-none relative w-[1px] pt-[50px] bg-primary
+}
+
+#singleProduct #activities ul li::after {
+    content: "";
+    @apply absolute left-[50%] bottom-0 w-[10px] h-[10px] rounded-full bg-primary -translate-x-[50%]
+}
+
+/* Row-by-row animation for DataTable */
+@keyframes row-fade-in-up {
+  from { 
+    opacity: 0; 
+    transform: translateY(15px);
+  }
+  to { 
+    opacity: 1; 
+    transform: translateY(0);
+  }
+}
+
+.row-appear-animation {
+  opacity: 0; /* Start hidden */
+  animation: row-fade-in-up 0.4s ease-out forwards;
+}
+
+/* Placeholder Filtering Animation styles */
+@keyframes filter-bar-anim {
+  0%, 100% { transform: scaleY(0.3); opacity: 0.5; }
+  50% { transform: scaleY(1); opacity: 1; }
+}
+
+.filter-bar {
+  animation: filter-bar-anim 1.2s cubic-bezier(0.2, 0.68, 0.18, 1.08) infinite;
+  transform-origin: center;
+}
+
+/* Custom Scrollbar Styles */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 5px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+/* PCBA Content Renderer Styles */
+.pcba-content-renderer {
+  color: #333;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+/* Fix dark mode text colors */
+.dark .pcba-content-renderer {
+  color: #e0e0e0;
+}
+
+/* Make sure the HTML content renders correctly */
+.pcba-content-renderer h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: #1e3a8a;
+}
+
+.pcba-content-renderer h2 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-top: 1.5rem;
+  margin-bottom: 1rem;
+  color: #1e40af;
+}
+
+.pcba-content-renderer h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-top: 1.25rem;
+  margin-bottom: 0.75rem;
+  color: #2563eb;
+}
+
+.pcba-content-renderer p {
+  margin-bottom: 1rem;
+  line-height: 1.6;
+}
+
+.pcba-content-renderer ul, .pcba-content-renderer ol {
+  margin-left: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.pcba-content-renderer li {
+  margin-bottom: 0.5rem;
+}
+
+.pcba-content-renderer table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 1rem;
+}
+
+.pcba-content-renderer th, .pcba-content-renderer td {
+  border: 1px solid #e5e7eb;
+  padding: 0.75rem;
+  text-align: left;
+}
+
+.pcba-content-renderer th {
+  background-color: #f9fafb;
+  font-weight: 600;
+}
+
+/* Support for glassmorphism and modern designs */
+.pcba-content-renderer .glass-panel,
+.pcba-content-renderer [class*="bg-blue-900/"],
+.pcba-content-renderer [class*="bg-indigo-900/"],
+.pcba-content-renderer [class*="bg-gradient-to-r"] {
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+/* Support for tailwind-style utility classes */
+.pcba-content-renderer .rounded-xl {
+  border-radius: 0.75rem;
+}
+
+.pcba-content-renderer .p-6 {
+  padding: 1.5rem;
+}
+
+.pcba-content-renderer .mb-4 {
+  margin-bottom: 1rem;
+}
+
+.pcba-content-renderer .font-bold {
+  font-weight: 700;
+}
+
+.pcba-content-renderer .text-green-400 {
+  color: #4ade80;
+}
+
+.pcba-content-renderer .border {
+  border-width: 1px;
+}
+
+.pcba-content-renderer .shadow-lg {
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+.pcba-content-renderer .grid {
+  display: grid;
+}
+
+.pcba-content-renderer .gap-4 {
+  gap: 1rem;
+}
+
+/* Ensure the colored elements have right colors */
+.pcba-content-renderer .text-blue-300 {
+  color: #93c5fd;
+}
+
+.pcba-content-renderer .text-blue-200 {
+  color: #bfdbfe;
+}
+
+.pcba-content-renderer .text-gray-300 {
+  color: #d1d5db;
+}
+
+.pcba-content-renderer .text-gray-400 {
+  color: #9ca3af;
+}
+
+.pcba-content-renderer .bg-blue-800\/50 {
+  background-color: rgba(30, 64, 175, 0.5);
+}
+
+.pcba-content-renderer .bg-blue-900\/20 {
+  background-color: rgba(30, 58, 138, 0.2);
+}
+
+.pcba-content-renderer .bg-blue-900\/10 {
+  background-color: rgba(30, 58, 138, 0.1);
+}
+
+/* Make sure SVGs render with correct colors */
+.pcba-content-renderer svg {
+  display: inline-block;
+  vertical-align: middle;
+  max-width: 100%;
+  width: auto;
+  height: auto;
+  fill: currentColor;
+}
+
+/* Media query for responsive grid */
+@media (min-width: 768px) {
+  .pcba-content-renderer .md\:grid-cols-4 {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+  
+  .pcba-content-renderer .md\:grid-cols-2 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+/* Additional styles for the Data Validation report */
+.pcba-content-renderer .report-header {
+  background: linear-gradient(to right, rgba(30, 58, 138, 0.9), rgba(79, 70, 229, 0.9));
+  border-color: rgba(59, 130, 246, 0.3);
+  display: flex;
+  align-items: center;
+  padding: 2rem;
+  border-radius: 0.75rem;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  margin-bottom: 2rem;
+}
+
+.pcba-content-renderer .executive-summary {
+  background-color: rgba(30, 58, 138, 0.2);
+  border-radius: 0.75rem;
+  border: 1px solid rgba(59, 130, 246, 0.4);
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.pcba-content-renderer .flex-1 {
+  flex: 1 1 0%;
+}
+
+.pcba-content-renderer .flex {
+  display: flex;
+}
+
+.pcba-content-renderer .items-center {
+  align-items: center;
+}
+
+.pcba-content-renderer .justify-between {
+  justify-content: space-between;
+}
+
+.pcba-content-renderer .hidden {
+  display: none;
+}
+
+.pcba-content-renderer .text-3xl {
+  font-size: 1.875rem;
+  line-height: 2.25rem;
+}
+
+.pcba-content-renderer .text-2xl {
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
+
+.pcba-content-renderer .text-xl {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+}
+
+.pcba-content-renderer .text-sm {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+}
+
+.pcba-content-renderer .text-xs {
+  font-size: 0.75rem;
+  line-height: 1rem;
+}
+
+.pcba-content-renderer .mr-2 {
+  margin-right: 0.5rem;
+}
+
+.pcba-content-renderer .mt-1 {
+  margin-top: 0.25rem;
+}
+
+.pcba-content-renderer .mt-6 {
+  margin-top: 1.5rem;
+}
+
+.pcba-content-renderer .mt-4 {
+  margin-top: 1rem;
+}
+
+.pcba-content-renderer .mb-2 {
+  margin-bottom: 0.5rem;
+}
+
+.pcba-content-renderer .mb-8 {
+  margin-bottom: 2rem;
+}
+
+.pcba-content-renderer .italic {
+  font-style: italic;
+}
+
+.pcba-content-renderer .font-semibold {
+  font-weight: 600;
+}
+
+.pcba-content-renderer .text-white {
+  color: white;
+}
+
+.pcba-content-renderer .text-gray-200 {
+  color: #e5e7eb;
+}
+
+.pcba-content-renderer .w-16 {
+  width: 4rem;
+}
+
+.pcba-content-renderer .h-16 {
+  height: 4rem;
+}
+
+.pcba-content-renderer .w-8 {
+  width: 2rem;
+}
+
+.pcba-content-renderer .h-8 {
+  height: 2rem;
+}
+
+.pcba-content-renderer .w-6 {
+  width: 1.5rem;
+}
+
+.pcba-content-renderer .h-6 {
+  height: 1.5rem;
+}
+
+.pcba-content-renderer .w-5 {
+  width: 1.25rem;
+}
+
+.pcba-content-renderer .h-5 {
+  height: 1.25rem;
+}
+
+.pcba-content-renderer .w-3 {
+  width: 0.75rem;
+}
+
+.pcba-content-renderer .h-3 {
+  height: 0.75rem;
+}
+
+.pcba-content-renderer .w-2 {
+  width: 0.5rem;
+}
+
+.pcba-content-renderer .h-2 {
+  height: 0.5rem;
+}
+
+.pcba-content-renderer .w-full {
+  width: 100%;
+}
+
+.pcba-content-renderer .rounded-full {
+  border-radius: 9999px;
+}
+
+.pcba-content-renderer .rounded-lg {
+  border-radius: 0.5rem;
+}
+
+.pcba-content-renderer .rounded-tl-lg {
+  border-top-left-radius: 0.5rem;
+}
+
+.pcba-content-renderer .rounded-tr-lg {
+  border-top-right-radius: 0.5rem;
+}
+
+.pcba-content-renderer .overflow-hidden {
+  overflow: hidden;
+}
+
+/* Support for more specific utility classes */
+.pcba-content-renderer .methodology-section,
+.pcba-content-renderer .geo-section,
+.pcba-content-renderer .anomaly-section,
+.pcba-content-renderer .recommendations-section {
+  margin-bottom: 2rem;
+}
+
+.pcba-content-renderer .validation-header,
+.pcba-content-renderer .geo-header {
+  background: linear-gradient(to right, rgba(30, 64, 175, 0.5), rgba(79, 70, 229, 0.5));
+  padding: 1rem 1.5rem;
+}
+
+.pcba-content-renderer .space-y-3 > * + * {
+  margin-top: 0.75rem;
+}
+
+.pcba-content-renderer .space-y-2 > * + * {
+  margin-top: 0.5rem;
+}
+
+/* Style for progress bar */
+.pcba-content-renderer .h-3 {
+  height: 0.75rem;
+}
+
+.pcba-content-renderer [style*="width:"] {
+  transition: width 0.5s ease-in-out;
+}
+
+/* Make the tables more beautiful */
+.pcba-content-renderer table {
+  background-color: rgba(30, 58, 138, 0.02);
+  border-radius: 0.5rem;
+  overflow: hidden;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+}
+
+.pcba-content-renderer th {
+  background-color: rgba(30, 64, 175, 0.3);
+  color: #bfdbfe;
+  font-weight: 600;
+  padding: 0.75rem 1rem;
+}
+
+.pcba-content-renderer td {
+  border-bottom: 1px solid rgba(30, 64, 175, 0.2);
+  padding: 0.75rem 1rem;
+}
+
+.pcba-content-renderer tr:last-child td {
+  border-bottom: none;
+}
+
+/* Apply dark background for cards */
+.pcba-content-renderer .metric-card,
+.pcba-content-renderer .region-card,
+.pcba-content-renderer .anomaly-types,
+.pcba-content-renderer .resolution-status,
+.pcba-content-renderer .rec-card {
+  background-color: rgba(30, 64, 175, 0.2);
+  border: 1px solid rgba(59, 130, 246, 0.2);
+  border-radius: 0.5rem;
+  padding: 1rem;
+}
+
+@media (min-width: 768px) {
+  .pcba-content-renderer .md\:block {
+    display: block;
+  }
+}
+
+/* Support for background with opacity classes */
+.pcba-content-renderer [class*="from-blue-900"], 
+.pcba-content-renderer [class*="to-indigo-900"] {
+  --tw-gradient-from: rgb(30, 58, 138);
+  --tw-gradient-to: rgb(79, 70, 229);
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+}
+
+/* Improved backdrop blur */
+.pcba-content-renderer [class*="backdrop-blur"] {
+  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
+}
+
+/* Support for gradient text */
+.pcba-content-renderer .text-transparent {
+  color: transparent;
+}
+
+.pcba-content-renderer .bg-clip-text {
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+
+/* Support for dark mode */
+.dark .pcba-content-renderer {
+  --tw-text-opacity: 1;
+  color: rgba(229, 231, 235, var(--tw-text-opacity));
+}
+
+.dark .pcba-content-renderer h1,
+.dark .pcba-content-renderer h2,
+.dark .pcba-content-renderer h3 {
+  color: rgba(147, 197, 253, var(--tw-text-opacity));
+}
+
+/* Additional specific styles for layout controls */
+.pcba-content-renderer .grid-cols-1 {
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+}
+
+.pcba-content-renderer .grid-cols-2 {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+/* Fix for progress bars and inline styles */
+.pcba-content-renderer [style*="width: 89%"] {
+  width: 89% !important;
+}

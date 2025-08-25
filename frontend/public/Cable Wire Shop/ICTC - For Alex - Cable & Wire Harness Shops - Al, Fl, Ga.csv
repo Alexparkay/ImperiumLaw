@@ -1,0 +1,13 @@
+State,Company Name,City,Description,Employees,All Websites,Company Owner,Target,Private or Public?,Owners Age,Company Age
+Alabama,"Kinney Industries, Inc.",Huntsville,"Cable/wire harness, electro-mech, aerospace.",~30,kinneyindustries.com,Todd Westbrook,YES,PRIVATE,31,53
+Georgia,"Cable Quest, Inc.",Ball Ground,"Custom cable assemblies, wire harness.",~10–25,cablequestinc.com,Clint Emerson,YES,PRIVATE,42,25
+Alabama,"ICB Electronics, Inc.",Scottsboro,Family-owned company specializing in cable and wire harness assemblies for electronics.,~25,icbelectronics.com,Jack O'Rear,YES,PRIVATE,54,24
+Georgia,"Elec-Tec, Inc.",Valdosta,"Wire harness, cable assembly, PCB, splicing.",~40,elec-tec.com,Deb Mlinar,YES,PRIVATE,61,41
+Florida,"Meridian Cable, LLC",St. Augustine,"Custom cable assemblies, coil cords, harnesses.",~40,meridiancableassemblies.com,Bud Kinzalow,YES,PRIVATE,62,31
+Alabama,Brundidge Electronics (BEC),Brundidge,"PCB assembly, wire harness, box-build.",~30,becelectronics.com,Johnny Wright,YES,PRIVATE,64,35
+Alabama,"Tri-Cities Mfg, Inc.",Tuscumbia,"Wire harness & cable assembly, primarily for automotive/industrial.",~40,t-c-m-inc.com,William Behl,YES,PRIVATE,66,56
+Florida,Ace Electronics (FL),Fort Lauderdale,Custom cable assemblies & wire harnesses.,10–25,aceelectronics.com,Larry Pomasan,YES,PRIVATE,77,49
+Georgia,Wire Tech Ltd,Summerville,"Custom wire harness, cable assemblies (OEM).",~45,wiretechltd.com,Keith Mowry,YES,PRIVATE,81,37
+Florida,Aero-Tel Wire Harness Corp,Orlando,"Wire harnesses, electromechanical assemblies.",~20,aerotelwireharness.com,Antoine Donatto,YES,PRIVATE,87,26
+Florida,Custom Mfg & Eng. (CME),Pinellas Park,"Custom cable/wire harness, electromech assemblies, test equipment.",~40,custom-mfg-eng.com,Nancy Crews,YES,PRIVATE,UNKNOWN,28
+Alabama,"Sundown Industrial Services, LLC",Arab,"Woman-owned, AS9100-certified manufacturer of mil-spec cable & wire harnesses (aerospace, defense).",<50,sundownco.com,Jenny Mitchell,YES,PRIVATE,UNKNOWN,UNKNOWN

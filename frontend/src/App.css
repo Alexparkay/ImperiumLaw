@@ -1,0 +1,31 @@
+:root {
+  --light-bg-primary: #FFFFFF;
+  --light-bg-secondary: #F5F5F5;
+  --light-bg-accent: #EBEBEB;
+  --light-text-primary: #333333;
+  --light-text-secondary: #666666;
+  --light-text-muted: #999999;
+  --light-accent-primary: #3B82F6;
+  --light-accent-secondary: #10B981;
+  --light-accent-warning: #F59E0B;
+}
+
+body {
+  background-color: var(--light-bg-primary);
+  color: var(--light-text-primary);
+  font-family: 'Inter', sans-serif;
+}
+
+.glass-panel {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+  transition: all 0.3s ease;
+}
+
+.glass-panel:hover {
+  box-shadow: 0 8px 32px rgba(59, 130, 246, 0.2);
+  transform: scale(1.02);
+} 
