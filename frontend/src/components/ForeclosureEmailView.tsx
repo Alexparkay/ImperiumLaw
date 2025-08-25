@@ -4,8 +4,8 @@ import {
   HiOutlineEye, 
   HiOutlinePaperAirplane,
   HiOutlineDocumentDuplicate,
-  HiOutlineSearch,
-  HiOutlineFilter,
+  HiOutlineMagnifyingGlass as HiOutlineSearch,
+  HiOutlineFunnel as HiOutlineFilter,
   HiOutlineChevronRight,
   HiOutlineInformationCircle
 } from 'react-icons/hi2';
@@ -40,7 +40,7 @@ const ForeclosureEmailView: React.FC<ForeclosureEmailViewProps> = ({ dataSet, is
     
     return dataSet.data
       .map((row, index) => ({
-        id: index,
+        id: String(index),
         email: row['Foreclosure Outreach Email'] || '',
         recipientName: row['Foreclosure Legal Contact'] || 'N/A',
         caseTitle: row['Title'] || 'N/A',
