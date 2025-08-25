@@ -15,6 +15,22 @@ interface CsvRow {
   [key: string]: string;
 }
 
+interface EmailData {
+  id: string;
+  email: string;
+  recipientName: string;
+  caseTitle: string;
+  docket: string;
+  court: string;
+  attorney: string;
+  lawFirm: string;
+  partyName: string;
+  firstName: string;
+  lastName: string;
+  jobTitle: string;
+  originalRow: CsvRow;
+}
+
 interface DataSet {
   name: string;
   filePath: string;
@@ -30,12 +46,12 @@ interface ForeclosureEmailViewProps {
 }
 
 const ForeclosureEmailView: React.FC<ForeclosureEmailViewProps> = ({ dataSet, isLoading }) => {
-  const [selectedEmail, setSelectedEmail] = useState<CsvRow | null>(null);
+  const [selectedEmail, setSelectedEmail] = useState<EmailData | null>(null);
   const [searchTerm, setSearchTerm] = useState('');
   const [filterBy, setFilterBy] = useState<'all' | 'hasEmail' | 'noEmail'>('hasEmail');
 
   // Process emails from the data
-  const emailData = useMemo(() => {
+  const emailData = useMemo((): EmailData[] => {
     if (!dataSet.data || dataSet.data.length === 0) return [];
     
     return dataSet.data

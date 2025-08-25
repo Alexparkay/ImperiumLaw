@@ -968,7 +968,7 @@ const TopTargetCard: React.FC<TopTargetCardProps> = ({ targetData, onCompanyClic
                                     const isLink = field.includes('Website') || (originalHeader.includes('Website') && isUrl(value));
                                     
                                     // Check if this should be treated as long text
-                                    const isLong = longTextHeaders.has(originalHeader) || (value && value.length > 100);
+                                    const isLong = longTextHeaders.has(originalHeader) || (!!value && value.length > 100);
                                     
                                     // Regular field rendering
                                     return renderInfoItem(
@@ -1389,7 +1389,15 @@ const DatabaseViewPage = () => {
 
                    // Apply legal data transformation if this appears to be legal case data
                    if (headerRow && (headerRow.includes('doc_number') || headerRow.includes('time_took') || headerRow.includes('nature_of_suit'))) {
-                       dataToUse = transformLegalData(dataToUse);
+                       const transformedData = transformLegalData(dataToUse);
+                       // Convert all values to strings to match CsvRow interface
+                       dataToUse = transformedData.map(row => {
+                           const stringRow: CsvRow = {};
+                           Object.entries(row).forEach(([key, value]) => {
+                               stringRow[key] = value !== undefined ? String(value) : '';
+                           });
+                           return stringRow;
+                       });
                        headersToUse = getLegalHeaders();
                    }
 
